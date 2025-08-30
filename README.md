@@ -1,37 +1,18 @@
-# Gambler Model
+# FourTwenty • The Gambler
 
-A modular decision model designed to simulate risk-tiered behavior, heuristic overrides, and synthetic persona alignment. Built for strategic targeting, outbound simulation, and portfolio calibration.
+>>Risk & odds — expected value, variance, and portfolio trade-offs.
 
-## 🔍 Overview
+## What’s inside
+- Purpose: <1–2 lines on the problem it solves>
+- Artifacts: `/playground` (if applicable), `/powerbi`, `/artifacts` (screens/GIFs), `/gtm` (exports), `/ga4`
+- Telemetry: GA4 via GTM (no PII). See Tag Assistant & DebugView screenshots in `/artifacts`.
 
-The Gambler operates across three core dimensions:
-- **Risk Tiering:** Assigns behavioral weights based on synthetic risk appetite
-- **Heuristic Overrides:** Injects rule-breaking logic to simulate edge-case decisions
-- **Persona Alignment:** Maps decisions to synthetic archetypes for outbound targeting
+## Quick start
+- Open `/playground/ux_playground.html` locally (`python3 -m http.server 5500`) to trigger events.
+- Attach GTM Preview and verify in GA4 DebugView.
 
-## 🧠 Use Cases
+## Highlights
+- Event taxonomy: `<event_1>`, `<event_2>` with params `<param_a>`, `<param_b>`
+- BI views: <2–3 bullets on visuals/insights>
 
-- Strategic portfolio simulation
-- Synthetic persona testing
-- Outbound targeting calibration
-- Heuristic stress-testing
-
-## 🗂️ Repo Structure
-
-- `data/` — Raw and processed datasets  
-- `notebooks/` — Exploratory analysis and model walkthroughs  
-- `scripts/` — Core logic and utilities  
-- `models/` — Saved model artifacts  
-- `docs/` — Documentation and diagrams  
-- `tags` — Modular tagging system for thread tracking
-
-## 🧬 Author
-
-Zachry Breeden  
-Founder, FourTwenty Analytics LLC  
-Architect of modular workflows and synthetic decision models
-
-## 📄 License
-
-MIT License# gambler-model
-A modular decision model built to simulate risk-tiered behavior, heuristic overrides, and synthetic persona alignment. The Gambler explores volatility, intuition, and edge-case logic across dynamic strategic tiers. Designed for portfolio targeting, outbound strategy, and synthetic model experimentation.
+License: MIT
