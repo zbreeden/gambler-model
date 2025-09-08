@@ -1,0 +1,110 @@
+- id: core
+  label: "Core Systems"
+  emoji: "🪐"
+  order: 10
+  meaning: "Foundation of the constellation—identity, scaffolding, and telemetry."
+  scope:
+    - "Identity & homepage"
+    - "Seeds & governance"
+    - "Signals & analytics"
+  includes:
+    - repo: "launch-model"   # 🚀 foundation / entry
+    - repo: "archive-model"  # 🫀 heart / records
+    - repo: "signal-model"   # 📡 nerves / telemetry
+  kpis:
+    - "Seeds compliance across repos (glossary.yml, tags.yml, statuses.yml present)"
+    - "Telemetry coverage and event quality"
+    - "Uptime of public artifacts (Pages, demos)"
+  policies:
+    - "Seed schema changes require PR + migration notes"
+    - "Core repos must remain public and pass CI checks"
+  see_also: ["delivery-insight", "growth-experiment", "orbit-ops"]
+
+- id: delivery-insight
+  label: "Delivery & Insight"
+  emoji: "📈"
+  order: 20
+  meaning: "Customer-facing delivery, reporting, and decision support."
+  scope:
+    - "Dashboards & storytelling (Power BI, GA4/GTM)"
+    - "Release readiness, QA, and demo assets"
+    - "Stakeholder reporting & KPIs"
+  includes:
+    - repo: "evaluator-model"   # 🧮 analytics & reporting
+    - repo: "anchor-model"      # ⚓ portfolio anchors
+    - repo: "bank-model"        # 💳 delivery metrics & demos
+  kpis:
+    - "On-time delivery rate and demo reliability"
+    - "Dashboard adoption/engagement (views, sessions, CTA)"
+    - "Defect escape rate and time-to-fix"
+  policies:
+    - "All public demos must have a README with usage notes and version tag"
+    - "Dashboards include source-of-truth links and last-refresh timestamps"
+  see_also: ["core", "growth-experiment", "orbit-ops"]
+
+- id: growth-experiment
+  label: "Growth & Experimentation"
+  emoji: "🧪"
+  order: 30
+  meaning: "Hypothesis-driven experiments, simulations, and optimization."
+  scope:
+    - "A/B tests, UX experiments, and event design"
+    - "Scenario modeling and probability sims"
+    - "Optimization loops and growth playbooks"
+  includes:
+    - repo: "grower-model"      # 🌱 optimization engine
+    - repo: "player-model"      # 🎲 scenarios & sims
+    - repo: "story-model"       # 📖 narrative triggers & signals
+  kpis:
+    - "Experiment velocity (launched per week) and win rate"
+    - "Lift on target metrics (conversion, retention, LTV)"
+    - "Cycle time from hypothesis → decision"
+  policies:
+    - "Pre-register hypotheses, success metrics, and guardrails"
+    - "Archive results with learnings and rollout decisions"
+  see_also: ["core", "delivery-insight", "orbit-ops"]
+
+- id: orbit-ops
+  label: "Orbit Ops"
+  emoji: "🛰️"
+  order: 40
+  meaning: "Operational plumbing: automation, CI/CD, governance, and reliability."
+  scope:
+    - "Repo scaffolding, seeds governance, and schema evolution"
+    - "CI/CD, pulses, and observability"
+    - "Security, backups, and incident playbooks"
+  includes:
+    - repo: "orbiter-model"     # 🛰️ automation & pulses
+    - repo: "firm-model"        # 🏢 org/hub configuration
+    - repo: "catalyst-model"    # ⚙️ build & release tooling
+  kpis:
+    - "Pulse success rate and mean time to repair (MTTR)"
+    - "Seed compliance across repos and drift alerts"
+    - "CI pass rate and deployment lead time"
+  policies:
+    - "Breaking seed/schema changes require migration PRs and version bumps"
+    - "All automations run least-privilege tokens and are audited quarterly"
+  see_also: ["core", "delivery-insight", "growth-experiment"]
+
+- id: elemental-system
+  label: "Elemental System"
+  emoji: "⚛️"
+  order: 0
+  meaning: "The hub repo housing primitives—seeds, artifacts, README, and public index."
+  scope:
+    - "Hub README.md and index.html (portfolio entry)"
+    - "Canonical seed definitions (glossary.yml, tags.yml, statuses.yml, orbits.yml, registry.yml)"
+    - "Shared assets, scaffolds, and templates"
+    - "Governance notes and contribution guidelines"
+  includes:
+    - repo: "FourTwentyAnalytics"  # hub repo
+  kpis:
+    - "Seed schema validity (lint/CI passing)"
+    - "Cross-repo seed compliance rate"
+    - "Hub uptime and README freshness"
+    - "Index render health (README/Pages load without errors)"
+  policies:
+    - "Schema changes require version bump and migration notes"
+    - "Hub remains public; CI must pass before merge"
+    - "Backwards-compatible deprecations for seed keys"
+  see_also: ["core", "delivery-insight", "growth-experiment", "orbit-ops"]

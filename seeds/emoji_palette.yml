@@ -1,0 +1,38 @@
+orbit_icons:
+  core: "🌞"
+  delivery-insight: "📈"
+  growth-experiment: "🧪"
+  elemental-system: "⚛️"
+  orbit-ops: "🛰️"
+
+status_icons:
+  seed: "🌱"
+  sprout: "🌿"
+  budding: "🌼"
+  bloom: "🌺"
+  dormant: "🍂"
+  active: "🟢"
+  developing: "🚧"
+  paused: "⏸️"
+  fired: "🔥"
+  cooled: "❄️"
+  overflowing: "🌊"
+
+glyph_icons:
+  anchor: "⚓️"
+  lineage: "🧬"
+  launch: "🚀"
+  archive: "🫀"
+  signal: "📡"
+  bank: "💳"
+  evaluator: "🧮"
+  story: "📖"
+  grower: "🌱"
+  catalyst: "⚙️"
+  player: "🎲"
+  gambler: "🎰"
+  trainer: "🏋️"
+  coach: "💪"   # locked for RoutineIQ/The Coach
+  orbiter: "🛰️"
+  firm: "🏢"
+  mirror: "🪞"

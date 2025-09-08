@@ -1,0 +1,95 @@
+# seeds/statuses.yml
+# Canonical lifecycle for FourTwenty modules
+- id: seed
+  label: "Seed"
+  emoji: "🌱"
+  order: 10
+  meaning: "Idea captured; repo exists; README stub."
+  criteria: ["repo_created", "readme_stub"]
+  allowed_next: ["sprout"]
+
+- id: sprout
+  label: "Sprout"
+  emoji: "🌿"
+  order: 20
+  meaning: "Scaffold working; basic demo or notebook runs."
+  criteria: ["scaffold_ready", "seeds_defined", "hello_world_demo"]
+  allowed_next: ["budding", "dormant"]
+
+- id: budding
+  label: "Budding"
+  emoji: "🌼"
+  order: 30
+  meaning: "Core features in place; ETL + docs; sample data."
+  criteria: ["etl_path", "unit_tests_min", "readme_fragments", "preview_link"]
+  allowed_next: ["bloom", "dormant"]
+
+- id: bloom
+  label: "Bloom"
+  emoji: "🌺"
+  order: 40
+  meaning: "Public-ready; CI green; dashboard/API live; lineage tracked."
+  criteria: ["ci_green", "dashboard_live", "api_or_export", "lineage_tracked"]
+  allowed_next: ["dormant"]
+
+- id: dormant
+  label: "Dormant"
+  emoji: "🍂"
+  order: 90
+  meaning: "Paused; security/maintenance only; clearly labeled."
+  criteria: ["archived_notice"]
+  allowed_next: ["sprout"]
+
+- id: developing
+  label: "Developing"
+  emoji: "🚧"
+  order: 25
+  meaning: "Under active construction; MVP shaping; APIs unstable."
+  criteria: ["milestone_open:mvp", "tests_smoke", "seeds_defined", "scaffold_ready"]
+  allowed_next: ["budding", "bloom", "paused", "dormant"]
+
+- id: active
+  label: "Active"
+  emoji: "🟢"
+  order: 50
+  meaning: "Currently in use, regularly updated, and monitored."
+  criteria:
+    - "README + seeds current"
+    - "artifact live (Pages/demo/API)"
+    - "owner_assigned"
+    - "meaningful_update<=30d"
+    - "analytics_wired"
+  allowed_next: ["cooled", "paused", "dormant", "overflowing"]
+
+- id: cooled
+  label: "Cooled"
+  emoji: "❄️"
+  order: 60
+  meaning: "Low-change maintenance; still used, few feature releases."
+  criteria: ["maintenance_only", "no_new_features>=60d", "owner_assigned"]
+  allowed_next: ["active", "paused", "dormant"]
+
+- id: overflowing
+  label: "Overflowing"
+  emoji: "🌊"
+  order: 65
+  meaning: "Over capacity—backlog/incidents exceed thresholds; stabilize before new work."
+  criteria: ["backlog_exceeds_threshold", "incident_open_or_error_rate_high", "stabilization_plan"]
+  allowed_next: ["active", "cooled", "paused"]
+
+- id: paused
+  label: "Paused"
+  emoji: "⏸️"
+  order: 70
+  meaning: "Temporary hold; security patches only until resume date."
+  criteria: ["pause_notice_in_readme", "no_release_planned<30d"]
+  allowed_next: ["active", "cooled", "dormant"]
+
+- id: fired
+  label: "Fired"
+  emoji: "🔥"
+  order: 99
+  meaning: "Decommissioned/retired; superseded or merged; read-only/archived."
+  criteria: ["final_release_tag", "replacement_or_redirect_noted", "archive_or_readonly"]
+  allowed_next: []
+

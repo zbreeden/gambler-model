@@ -1,0 +1,1236 @@
+- key: analyst_skills
+  term: Analyst Skills (Technical, Functional, Soft)
+  definition: 'Blend of tool proficiency (spreadsheets, SQL, viz tools, programming), functional capabilities (statistics, analytical thinking, problem-solving, probing, project management), and soft skills (collaboration, communication, storytelling, curiosity, informed intuition).
+
+    '
+  examples:
+  - SQL for joins; Power BI dashboards; stakeholder workshop; narrative readout
+  see_also:
+  - sql
+  - data_visualization
+  - statistics
+  - storytelling
+  tags:
+  - ibm
+  - skills
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Skills
+  status: draft
+- key: anchor
+  term: Anchor
+  definition: 'A primary navigation root or canonical starting point.
+
+    '
+  examples:
+  - Launch Model as the portfolio entry
+  see_also:
+  - portfolio
+  - nav
+- key: apache_spark
+  term: Apache Spark
+  definition: 'Distributed processing engine (batch & streaming) with in-memory acceleration and APIs for SQL, Python, R, Java/Scala.
+
+    '
+  examples:
+  - Process engagement stream to compute rolling WIP/throughput
+  see_also:
+  - hadoop
+  - hdfs
+  - data_streams
+  tags:
+  - ibm
+  - big-data
+  - streaming
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Big Data Tools
+  status: draft
+- key: babok_guide
+  term: BABOK Guide
+  definition: 'The Guide to the Business Analysis Body of Knowledge from IIBA that defines the profession and describes commonly accepted practices, knowledge areas, tasks, techniques, and underlying competencies.
+
+    '
+  examples:
+  - Referencing BABOK when mapping The Trainer tasks to knowledge areas
+  see_also:
+  - iiba
+  - babok_knowledge_areas
+  tags:
+  - cbap
+  - standard
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: babok_knowledge_areas
+  term: BABOK Knowledge Areas
+  definition: 'Six domains that organize BA work: Business Analysis Planning & Monitoring; Elicitation & Collaboration; Requirements Life Cycle Management; Strategy Analysis; Requirements Analysis & Design Definition; and Solution Evaluation.
+
+    '
+  examples:
+  - Tagging Trainer tasks with the relevant knowledge area
+  see_also:
+  - elicitation
+  - requirements_lifecycle_management
+  - strategy_analysis
+  - solution_evaluation
+  tags:
+  - cbap
+  - framework
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: baccm
+  term: Business Analysis Core Concept Model (BACCM)
+  definition: 'A shared mental framework for business analysis built on six equal concepts— Change, Need, Solution, Stakeholder, Value, and Context—used to frame any BA task regardless of domain or methodology.
+
+    '
+  examples:
+  - 'Framing The Trainer: identify the Need, define the Change and Solution, map Stakeholders, value, and Context'
+  see_also:
+  - change
+  - need
+  - solution
+  - stakeholder
+  - value
+  - context
+  - babok_guide
+  tags:
+  - cbap
+  - framework
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2 – BACCM & Techniques
+  status: draft
+- key: bi_analyst
+  term: Business Intelligence (BI) Analyst
+  definition: 'Organizes and monitors business data, builds standardized reports/dashboards, and explores trends to support performance decisions, often with market/external focus.
+
+    '
+  examples:
+  - Power BI sales dashboard with daily refresh and drill-downs
+  see_also:
+  - data_analyst
+  - kpi
+  - dashboard
+  tags:
+  - ibm
+  - roles
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Roles
+  status: draft
+- key: big_data_5vs
+  term: Big Data (5 Vs)
+  definition: 'Large, fast, diverse data where value depends on managing volume, velocity, variety—and quality (veracity)—to produce outcomes (value).
+
+    '
+  examples:
+  - Clickstream + IoT + social signals for portfolio insights
+  see_also:
+  - hadoop
+  - apache_spark
+  - data_lake
+  tags:
+  - ibm
+  - big-data
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Big Data
+  status: draft
+- key: business_analysis
+  term: Business Analysis
+  definition: 'A disciplined practice that enables change by defining needs and recommending solutions that deliver value to stakeholders. Emphasizes articulating the rationale for change, shaping solutions, and ensuring delivered outcomes match expected value.
+
+    '
+  examples:
+  - Scoping FourTwenty initiatives before building (e.g., The Trainer)
+  see_also:
+  - babok_guide
+  - stakeholder
+  - requirements_levels
+  - solution_evaluation
+  tags:
+  - cbap
+  - credentials
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: business_glossary
+  term: Business Glossary
+  definition: 'A curated list of noun terms and clear definitions for a domain; the first step in building a Concept Model and reducing ambiguity.
+
+    '
+  examples:
+  - glossary.yml terms for GA4 events, modules, and roles
+  see_also:
+  - concept_modeling
+  - data_dictionary
+  tags:
+  - cbap
+  - knowledge
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: business_requirements
+  term: Business Requirements
+  definition: 'Statements of goals, objectives, and outcomes that justify a change and define what success looks like for the organization (often tied to KPIs).
+
+    '
+  examples:
+  - Increase GA4 event adoption by 50% within a month
+  see_also:
+  - strategy_analysis
+  - stakeholder_requirements
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: cbap_certification
+  term: CBAP Certification
+  definition: 'IIBA’s top-tier credential for experienced business analysts. Eligibility includes substantial BA experience (e.g., ~7,500 hours over 10 years) and professional development hours, followed by an exam.
+
+    '
+  examples:
+  - Mapping Zach’s BA/ETL history to CBAP eligibility requirements
+  see_also:
+  - iiba
+  - babok_guide
+  tags:
+  - cbap
+  - credentials
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: change
+  term: Change
+  definition: 'The act of transformation in response to a Need; deliberate and controlled through BA activities to improve organizational performance.
+
+    '
+  examples:
+  - Introduce GA4 custom events to improve engagement measurement
+  see_also:
+  - need
+  - solution
+  - context
+  - baccm
+  tags:
+  - cbap
+  - baccm
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: concept_modeling
+  term: Concept Modeling
+  definition: 'A technique to organize a domain’s vocabulary and relationships: start a noun-based glossary, add verb relationships, classify/specialize, and visualize for stakeholder alignment. Business-friendly, but not a data model and may set unrealistic build expectations; benefits from collaborative tools.
+
+    '
+  examples:
+  - 'Map FourTwenty terms: Event → is triggered by → Interaction; Event → belongs to → Module'
+  see_also:
+  - business_glossary
+  - data_modeling
+  - requirements_levels
+  - baccm
+  tags:
+  - cbap
+  - technique
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: 'Module 2 – Technique: Concept Modeling'
+  status: draft
+- key: context
+  term: Context
+  definition: 'The internal and external circumstances that influence or are influenced by the Change; aligns with ISO 9000’s notion of issues affecting how an organization pursues its objectives.
+
+    '
+  examples:
+  - Regulatory constraints on PII shape event design
+  see_also:
+  - change
+  - need
+  - solution
+  - baccm
+  tags:
+  - cbap
+  - baccm
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: data_analysis_process
+  term: Data Analysis Process
+  definition: 'Define the problem and desired outcome, set evaluation metrics, gather and clean data, analyze/mine and interpret, then communicate findings to drive decisions.
+
+    '
+  examples:
+  - 'Overbilling case study: hypotheses → datasets → patterns → stakeholder readout'
+  see_also:
+  - data_wrangling
+  - kpi
+  - storytelling
+  tags:
+  - ibm
+  - process
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Process
+  status: draft
+- key: data_analyst
+  term: Data Analyst
+  definition: 'Translates data into insights by acquiring, cleaning, analyzing, and visualizing data, then communicating findings that inform decisions.
+
+    '
+  examples:
+  - Analyze engagement WIP/throughput; publish weekly KPI report
+  see_also:
+  - descriptive_analytics
+  - diagnostic_analytics
+  - data_visualization
+  tags:
+  - ibm
+  - roles
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Roles
+  status: draft
+- key: data_ecosystem
+  term: Data Ecosystem
+  definition: 'Interconnected people, processes, tools, and infrastructure that acquire, store, process, and disseminate data from diverse sources so stakeholders can generate and act on insights.
+
+    '
+  examples:
+  - Repo → event stream → warehouse/lake → dashboards for stakeholders
+  see_also:
+  - etl
+  - governance
+  - data_wrangling
+  tags:
+  - ibm
+  - foundations
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Intro & Ecosystem
+  status: draft
+- key: data_engineer
+  term: Data Engineer
+  definition: 'Builds and maintains data architectures; integrates data from disparate sources; designs and operates repositories to make data accessible and reliable for analytics and applications.
+
+    '
+  examples:
+  - Pipeline to collect GA events and land them in a queryable store
+  see_also:
+  - etl
+  - data_warehouse
+  - data_lake
+  tags:
+  - ibm
+  - roles
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Roles
+  status: draft
+- key: data_lake
+  term: Data Lake
+  definition: 'Storage for raw structured, semi-structured, and unstructured data in native formats, tagged for later processing.
+
+    '
+  examples:
+  - Raw GA4 export + scraped FAQs for feature discovery
+  see_also:
+  - data_warehouse
+  - etl
+  - nosql_database
+  tags:
+  - ibm
+  - repositories
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Repositories
+  status: draft
+- key: data_mart
+  term: Data Mart
+  definition: 'Subject-area slice of a warehouse with isolated performance/security for a team or function.
+
+    '
+  examples:
+  - Marketing mart with engagement and campaign tables
+  see_also:
+  - data_warehouse
+  - data_lake
+  tags:
+  - ibm
+  - repositories
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Repositories
+  status: draft
+- key: data_pipeline
+  term: Data Pipeline
+  definition: 'End-to-end system that moves/processes data (batch, streaming, or hybrid) from sources to destinations (lakes, apps, viz), of which ETL is a subset.
+
+    '
+  examples:
+  - Event stream → stream processor → lake → dashboard
+  see_also:
+  - etl
+  - data_lake
+  - apache_spark
+  tags:
+  - ibm
+  - pipelines
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – ETL & Pipelines
+  status: draft
+- key: data_scientist
+  term: Data Scientist
+  definition: 'Uses statistical and machine learning techniques to build predictive or prescriptive models, often requiring programming and domain knowledge.
+
+    '
+  examples:
+  - Forecast conversion rate from historical session data
+  see_also:
+  - predictive_analytics
+  - prescriptive_analytics
+  - feature_engineering
+  tags:
+  - ibm
+  - roles
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Roles
+  status: draft
+- key: data_sources
+  term: Data Sources
+  definition: 'Origins of data for analytics: relational/non-relational databases, flat files/spreadsheets, APIs/web services, web scraping, data streams, social and sensor feeds.
+
+    '
+  examples:
+  - Twitter API for sentiment; Kafka clickstream; CRM DB extract
+  see_also:
+  - relational_database
+  - nosql_database
+  - data_streams
+  - web_scraping
+  tags:
+  - ibm
+  - sources
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Sources
+  status: draft
+- key: data_streams
+  term: Data Streams
+  definition: 'Continuous, time-stamped event feeds from devices, apps, and services used for real-time analysis.
+
+    '
+  examples:
+  - Pageview and engagement events flowing to a stream processor
+  see_also:
+  - etl
+  - data_pipeline
+  - apache_spark
+  tags:
+  - ibm
+  - sources
+  - streaming
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Sources
+  status: draft
+- key: data_warehouse
+  term: Data Warehouse
+  definition: 'Central, analysis-ready repository integrating cleansed and conformed data for BI/analytics.
+
+    '
+  examples:
+  - Conformed sessions, events, and outcomes for portfolio-wide KPIs
+  see_also:
+  - data_mart
+  - etl
+  - data_pipeline
+  tags:
+  - ibm
+  - repositories
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Repositories
+  status: draft
+- key: delimited_text_file
+  term: Delimited Text File (CSV/TSV)
+  definition: 'Plain-text rows where fields are separated by a delimiter (comma, tab, etc.); widely supported, schema described by header row.
+
+    '
+  examples:
+  - Exported KPI table as CSV for The Trainer
+  see_also:
+  - xlsx
+  - json
+  - data_warehouse
+  tags:
+  - ibm
+  - formats
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – File Formats
+  status: draft
+- key: descriptive_analytics
+  term: Descriptive Analytics
+  definition: 'Summarizes past data to show what happened over a period; baseline for monitoring KPIs and trends.
+
+    '
+  examples:
+  - Weekly pageviews by source in The Trainer
+  see_also:
+  - diagnostic_analytics
+  - kpi
+  tags:
+  - ibm
+  - analytics-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Analysis Types
+  status: draft
+- key: diagnostic_analytics
+  term: Diagnostic Analytics
+  definition: 'Investigates why an outcome occurred by drilling into segments, correlations, and drivers.
+
+    '
+  examples:
+  - Explain a traffic spike by campaign, landing page, and device
+  see_also:
+  - descriptive_analytics
+  - root_cause
+  tags:
+  - ibm
+  - analytics-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Analysis Types
+  status: draft
+- key: elicitation
+  term: Elicitation & Collaboration
+  definition: 'Activities to uncover needs and requirements and to align stakeholder understanding through interviews, workshops, observation, and co-design.
+
+    '
+  examples:
+  - Stakeholder discovery for GA4+GTM sprint goals
+  see_also:
+  - stakeholder
+  - requirements_levels
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: etl
+  term: Extract, Transform, Load (ETL)
+  definition: 'Automated process to acquire data from sources, clean/standardize/enrich, and load into a target repository; supports batch and streaming variants.
+
+    '
+  examples:
+  - Nightly CSV ingest + real-time event transforms for ‘The Trainer’
+  see_also:
+  - data_pipeline
+  - data_warehouse
+  tags:
+  - ibm
+  - pipelines
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – ETL & Pipelines
+  status: draft
+- key: functional_requirements
+  term: Functional Requirements
+  definition: 'Behaviors the solution performs in response to inputs or events, often captured as acceptance criteria for user stories.
+
+    '
+  examples:
+  - Trigger 'scroll_opened' GA event when README panel expands
+  see_also:
+  - solution_requirements
+  - non_functional_requirements
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: generative_ai_for_analysts
+  term: Generative AI for Analysts
+  definition: 'Models that create new content (text, images, code) and can accelerate analysis via summarization, data augmentation, scenario simulation, and automated drafting—used responsibly with awareness of limitations and bias.
+
+    '
+  examples:
+  - Draft a findings summary; synthesize scenarios; generate synthetic edge cases
+  see_also:
+  - predictive_analytics
+  - ethics
+  - quality_assurance
+  tags:
+  - ibm
+  - genai
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Generative AI overview
+  status: draft
+- key: given_when_then
+  term: Given–When–Then (GWT)
+  definition: 'A behavior-driven format for functional acceptance criteria capturing preconditions, action, and expected outcome (e.g., ‘Given on checkout, When user selects BNPL, Then open third-party interface’).
+
+    '
+  examples:
+  - Define acceptance tests for custom event capture
+  see_also:
+  - functional_requirements
+  - solution_requirements
+  tags:
+  - cbap
+  - requirements
+  - bdd
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2 – Requirements Details
+  status: draft
+- key: hadoop
+  term: Apache Hadoop
+  definition: 'Open-source ecosystem for distributed storage/processing of large datasets across clusters; often paired with HDFS and Hive.
+
+    '
+  examples:
+  - Archive cold data to HDFS-backed storage
+  see_also:
+  - hdfs
+  - hive
+  - apache_spark
+  tags:
+  - ibm
+  - big-data
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Big Data Tools
+  status: draft
+- key: hdfs
+  term: Hadoop Distributed File System (HDFS)
+  definition: 'Fault-tolerant, distributed storage that partitions/replicates files across nodes and lets computation run where data resides.
+
+    '
+  examples:
+  - Store large raw parquet files with 3x replication
+  see_also:
+  - hadoop
+  - apache_spark
+  tags:
+  - ibm
+  - big-data
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Big Data Tools
+  status: draft
+- key: hive
+  term: Apache Hive
+  definition: 'SQL-on-Hadoop data warehouse layer optimized for batch/long scans; unsuitable for low-latency transactions.
+
+    '
+  examples:
+  - Ad-hoc aggregates on raw clickstream in HDFS
+  see_also:
+  - hadoop
+  - apache_spark
+  tags:
+  - ibm
+  - big-data
+  - sql
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Big Data Tools
+  status: draft
+- key: iiba
+  term: International Institute of Business Analysis (IIBA)
+  definition: 'A global non-profit association for business analysis that maintains standards (including the BABOK Guide) and offers certifications such as ECBA, CCBA, and CBAP.
+
+    '
+  examples:
+  - Using ECBA/CCBA/CBAP levels to frame credentials on the Portfolio
+  see_also:
+  - babok_guide
+  - cbap_certification
+  tags:
+  - cbap
+  - credentials
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: json
+  term: JSON
+  definition: 'Lightweight text format for structured data (key/value, arrays); common for APIs/web services.
+
+    '
+  examples:
+  - GTM → GA4 event payloads
+  see_also:
+  - xml
+  - semi_structured_data
+  - nosql_database
+  tags:
+  - ibm
+  - formats
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – File Formats
+  status: draft
+- key: lineage
+  term: Lineage
+  definition: 'Recorded ancestry of data and artifacts across ETL steps and modules.
+
+    '
+  examples:
+  - modules.parquet ← seeds/modules.yml (task=registry.materialize)
+  see_also:
+  - provenance
+  - audit
+- key: need
+  term: Need
+  definition: 'A problem or opportunity that motivates Change; needs can trigger changes and new changes can introduce further needs (iterative cycle).
+
+    '
+  examples:
+  - Low funnel visibility → add checkout events; later, need for attribution refinement
+  see_also:
+  - change
+  - solution
+  - value
+  - baccm
+  tags:
+  - cbap
+  - baccm
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: non_functional_requirements
+  term: Non-Functional Requirements (Quality Attributes)
+  definition: 'Conditions under which the solution must remain effective (e.g., security, performance, availability, accessibility, maintainability, recoverability, audit).
+
+    '
+  examples:
+  - Handle 100 requests per minute without delayed response
+  see_also:
+  - solution_requirements
+  - solution_evaluation
+  tags:
+  - cbap
+  - quality
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: nosql_database
+  term: NoSQL Database
+  definition: 'Non-relational stores with flexible schemas; common models include key-value, document, column-family, and graph—optimized for scale/performance.
+
+    '
+  examples:
+  - Document store for event payloads; key-value cache for sessions
+  see_also:
+  - relational_database
+  - data_lake
+  tags:
+  - ibm
+  - repositories
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Databases & Repositories
+  status: draft
+- key: perspective
+  term: Perspective (BA Flavor)
+  definition: 'An organizational context or delivery approach (e.g., agile, process-centric, product-led) that shapes which techniques you use and how you apply BA tasks.
+
+    '
+  examples:
+  - Adapting Trainer backlog practices for a startup vs. a risk-averse enterprise
+  see_also:
+  - babok_knowledge_areas
+  - underlying_competencies
+  tags:
+  - cbap
+  - approach
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: portfolio
+  term: Portfolio
+  definition: 'Content intended for external viewing (landing pages, demos, docs). Aggregates public entry points across modules.
+
+    '
+  examples:
+  - Launch Model GitHub Pages site
+  see_also:
+  - launch
+  - entry
+- key: predictive_analytics
+  term: Predictive Analytics
+  definition: 'Uses historical patterns to estimate the likelihood of future outcomes; results are probabilistic.
+
+    '
+  examples:
+  - Forecast weekly sessions from seasonal history
+  see_also:
+  - time_series
+  - data_scientist
+  tags:
+  - ibm
+  - analytics-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Analysis Types
+  status: draft
+- key: prescriptive_analytics
+  term: Prescriptive Analytics
+  definition: 'Evaluates possible actions and their likely outcomes to recommend what to do next.
+
+    '
+  examples:
+  - Choose promo variant that maximizes predicted conversions
+  see_also:
+  - predictive_analytics
+  - optimization
+  tags:
+  - ibm
+  - analytics-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 1 – Analysis Types
+  status: draft
+- key: python
+  term: Python
+  definition: 'General-purpose language with rich analytics libraries (NumPy, pandas); readable syntax and strong community—common for data prep, ML, and ETL.
+
+    '
+  examples:
+  - pandas transform for GA4 event features
+  see_also:
+  - apache_spark
+  - sql
+  - r_language
+  tags:
+  - ibm
+  - languages
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Languages
+  status: draft
+- key: r_language
+  term: R (Language)
+  definition: 'Open-source environment for statistics, visualization, and analysis; extensible ecosystem (ggplot2, plotly) and report/app publishing.
+
+    '
+  examples:
+  - Exploratory plots for streak patterns
+  see_also:
+  - python
+  - sql
+  tags:
+  - ibm
+  - languages
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Languages
+  status: draft
+- key: relational_database
+  term: Relational Database (RDBMS)
+  definition: 'Table-based store with defined schema and SQL querying; supports joins, integrity constraints, and ACID properties.
+
+    '
+  examples:
+  - Dimensional model for reporting KPIs
+  see_also:
+  - sql
+  - nosql_database
+  - data_warehouse
+  tags:
+  - ibm
+  - repositories
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Databases & Repositories
+  status: draft
+- key: requirements_levels
+  term: Requirements Levels
+  definition: 'BABOK groups requirements into four levels: Business (why outcomes), Stakeholder (needs/expectations by actor), Solution (capabilities and qualities), and Transition (temporary needs to move from current to future state).
+
+    '
+  examples:
+  - Mapping Trainer goals → user stories → acceptance criteria → rollout plan
+  see_also:
+  - business_requirements
+  - stakeholder_requirements
+  - solution_requirements
+  - transition_requirements
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: requirements_lifecycle_management
+  term: Requirements Life Cycle Management
+  definition: 'Planning, tracing, maintaining, prioritizing, and approving requirements from discovery through change, ensuring they remain current and aligned to value.
+
+    '
+  examples:
+  - Trace GA4 events to stakeholder outcomes and update as scope changes
+  see_also:
+  - requirements_levels
+  - solution_requirements
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: semi_structured_data
+  term: Semi-Structured Data
+  definition: 'Data with organizational properties but no rigid schema; uses tags/metadata (e.g., XML/JSON) and is often hierarchical.
+
+    '
+  examples:
+  - Webhook JSON payloads for events
+  see_also:
+  - structured_data
+  - unstructured_data
+  - json
+  - xml
+  - nosql_database
+  tags:
+  - ibm
+  - data-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Data Types & Sources
+  status: draft
+- key: solution
+  term: Solution
+  definition: 'A specific way to satisfy one or more Needs by resolving a problem or enabling an opportunity.
+
+    '
+  examples:
+  - Deploy GTM container with standardized event schema
+  see_also:
+  - need
+  - value
+  - stakeholder
+  - baccm
+  tags:
+  - cbap
+  - baccm
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: solution_evaluation
+  term: Solution Evaluation
+  definition: 'Assessing a solution’s performance and value after or during delivery to verify it achieves the desired outcomes and to identify improvements.
+
+    '
+  examples:
+  - Validate GA4 custom events deliver the engagement metrics promised
+  see_also:
+  - business_requirements
+  - non_functional_requirements
+  tags:
+  - cbap
+  - quality
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: solution_requirements
+  term: Solution Requirements
+  definition: 'Capabilities and qualities the solution must have to meet stakeholder needs; split into functional (behaviors/acceptance criteria) and non-functional (quality attributes and constraints).
+
+    '
+  examples:
+  - Send reminder email when session expires and items remain in cart
+  see_also:
+  - functional_requirements
+  - non_functional_requirements
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: sql
+  term: SQL
+  definition: 'Standard query language for creating and manipulating relational data (tables, views, joins, DML/DDL, stored procedures).
+
+    '
+  examples:
+  - Windowed KPI rollups in a warehouse
+  see_also:
+  - relational_database
+  - hive
+  tags:
+  - ibm
+  - languages
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Languages
+  status: draft
+- key: stakeholder
+  term: Stakeholder
+  definition: 'Any person, group, or organization with a role in, interest in, or impact from a change. Stakeholders supply needs, consume outcomes, and collaborate to define value.
+
+    '
+  examples:
+  - Data consumer for GA4 metrics (marketing analyst, product owner)
+  see_also:
+  - elicitation
+  - stakeholder_requirements
+  tags:
+  - cbap
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: stakeholder_requirements
+  term: Stakeholder Requirements
+  definition: 'Needs and expectations of specific stakeholders or user groups, often expressed as user stories to clarify who needs what and why.
+
+    '
+  examples:
+  - As a visitor, I want my cart retained so I can resume later
+  see_also:
+  - business_requirements
+  - solution_requirements
+  - elicitation
+  tags:
+  - cbap
+  - requirements
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: strategy_analysis
+  term: Strategy Analysis
+  definition: 'Pre-project analysis to understand the current and future states, define business goals and scope, and select initiatives that deliver value.
+
+    '
+  examples:
+  - Define objectives for The Trainer (ritual cadence, streak goals)
+  see_also:
+  - business_requirements
+  - solution_evaluation
+  tags:
+  - cbap
+  - planning
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: structured_data
+  term: Structured Data
+  definition: 'Data with a well-defined schema (rows/columns) that fits relational tables and standard analytical methods.
+
+    '
+  examples:
+  - Survey response table; GA session table
+  see_also:
+  - semi_structured_data
+  - unstructured_data
+  - relational_database
+  tags:
+  - ibm
+  - data-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Data Types & Sources
+  status: draft
+- key: transition_requirements
+  term: Transition Requirements
+  definition: 'Temporary capabilities and conditions needed to move from current to future state, such as data migration, training, and phased releases.
+
+    '
+  examples:
+  - Migrate historic events to new GA4 property; train contributors
+  see_also:
+  - requirements_levels
+  - solution_evaluation
+  tags:
+  - cbap
+  - delivery
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: underlying_competencies
+  term: Underlying Competencies
+  definition: 'Human skills and business knowledge that complement BA methods—communication, facilitation, critical thinking, domain awareness—enabling effective practice.
+
+    '
+  examples:
+  - Facilitating a cross-module retro for The Trainer
+  see_also:
+  - elicitation
+  - perspective
+  tags:
+  - cbap
+  - skills
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 1 – Introduction
+  status: draft
+- key: unstructured_data
+  term: Unstructured Data
+  definition: 'Data without a predefined format (text, images, audio/video, PDFs) that does not map cleanly to rows/columns.
+
+    '
+  examples:
+  - Session recordings, support emails, screenshots
+  see_also:
+  - semi_structured_data
+  - data_lake
+  - nosql_database
+  tags:
+  - ibm
+  - data-types
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – Data Types & Sources
+  status: draft
+- key: value
+  term: Value
+  definition: 'The importance or usefulness of something to a Stakeholder; can be delivered by different Solutions and may be tangible (e.g., revenue, cost) or intangible (e.g., ease of use, brand loyalty).
+
+    '
+  examples:
+  - Faster dashboard load → higher satisfaction (intangible); reduced churn (tangible)
+  see_also:
+  - stakeholder
+  - solution
+  - need
+  - baccm
+  tags:
+  - cbap
+  - baccm
+  orbit: Delivery & Insight
+  source:
+    course: CBAP
+    module: Module 2
+  status: draft
+- key: xlsx
+  term: XLSX (Excel Workbook)
+  definition: 'Open XML spreadsheet format with multiple worksheets; tabular cells with formulas/formatting.
+
+    '
+  examples:
+  - Manual backlog tracker with streak metrics
+  see_also:
+  - delimited_text_file
+  - data_wrangling
+  tags:
+  - ibm
+  - formats
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – File Formats
+  status: draft
+- key: xml
+  term: XML
+  definition: 'Tag-based markup for structured exchange; human/machine readable; platform/language independent.
+
+    '
+  examples:
+  - Survey exports with hierarchical question blocks
+  see_also:
+  - json
+  - semi_structured_data
+  tags:
+  - ibm
+  - formats
+  orbit: Delivery & Insight
+  source:
+    course: IBM Data Analytics
+    module: Module 2 – File Formats
+  status: draft

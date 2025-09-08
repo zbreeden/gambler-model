@@ -1,0 +1,8 @@
+# Files to push into every module repo (relative to repo root)
+files:
+  - seeds/emoji_palette.yml
+  - seeds/orbits.yml
+  - seeds/tags.yml
+  - seeds/glossary.yml
+  - seeds/statuses.yml
+  - seeds/modules.yml

@@ -1,0 +1,314 @@
+- key: portfolio
+  label: "Portfolio"
+  description: "Public-facing entry artifacts"
+  kind: audience
+  gloss_ref: portfolio
+  deprecated: false
+
+- key: entry
+  label: "Entry"
+  description: "Primary navigation/landing points"
+  kind: nav
+  gloss_ref: entry
+  deprecated: false
+
+- key: anchor
+  label: Anchor
+  description: Primary navigation root or canonical start
+  kind: navigation
+  gloss_ref: anchor
+  deprecated: false
+
+- key: business_analysis
+  label: Business Analysis
+  description: Discipline enabling change and value
+  kind: discipline
+  gloss_ref: business_analysis
+  deprecated: false
+
+- key: babok_guide
+  label: BABOK Guide
+  description: IIBA guide/standard for BA practice
+  kind: standard
+  gloss_ref: babok_guide
+  deprecated: false
+
+- key: baccm
+  label: BACCM
+  description: Core BA concept model (Change, Need, Solution, Stakeholder, Value, Context)
+  kind: framework
+  gloss_ref: baccm
+  deprecated: false
+
+- key: data_analyst
+  label: Data Analyst
+  description: Role translating data into insights
+  kind: role
+  gloss_ref: data_analyst
+  deprecated: false
+
+- key: bi_analyst
+  label: BI Analyst
+  description: Role building standardized BI dashboards
+  kind: role
+  gloss_ref: bi_analyst
+  deprecated: false
+
+- key: data_engineer
+  label: Data Engineer
+  description: Role building and operating data pipelines
+  kind: role
+  gloss_ref: data_engineer
+  deprecated: false
+
+- key: data_scientist
+  label: Data Scientist
+  description: Role building predictive/prescriptive models
+  kind: role
+  gloss_ref: data_scientist
+  deprecated: false
+
+- key: descriptive_analytics
+  label: Descriptive Analytics
+  description: What happened (KPIs, trends)
+  kind: analytics_type
+  gloss_ref: descriptive_analytics
+  deprecated: false
+
+- key: diagnostic_analytics
+  label: Diagnostic Analytics
+  description: Why it happened (drivers, segments)
+  kind: analytics_type
+  gloss_ref: diagnostic_analytics
+  deprecated: false
+
+- key: predictive_analytics
+  label: Predictive Analytics
+  description: What is likely to happen next
+  kind: analytics_type
+  gloss_ref: predictive_analytics
+  deprecated: false
+
+- key: prescriptive_analytics
+  label: Prescriptive Analytics
+  description: What we should do next
+  kind: analytics_type
+  gloss_ref: prescriptive_analytics
+  deprecated: false
+
+- key: data_warehouse
+  label: Data Warehouse
+  description: Central analysis-ready repository
+  kind: repository
+  gloss_ref: data_warehouse
+  deprecated: false
+
+- key: data_lake
+  label: Data Lake
+  description: Raw, tagged storage for diverse data
+  kind: repository
+  gloss_ref: data_lake
+  deprecated: false
+
+- key: nosql_database
+  label: NoSQL Database
+  description: Flexible schema stores for scale/performance
+  kind: repository
+  gloss_ref: nosql_database
+  deprecated: false
+
+- key: relational_database
+  label: Relational Database
+  description: Table-based store with SQL and ACID
+  kind: repository
+  gloss_ref: relational_database
+  deprecated: false
+
+- key: etl
+  label: ETL
+  description: Extract, Transform, Load processes
+  kind: pipeline
+  gloss_ref: etl
+  deprecated: false
+
+- key: data_pipeline
+  label: Data Pipeline
+  description: End-to-end data movement/processing system
+  kind: pipeline
+  gloss_ref: data_pipeline
+  deprecated: false
+
+- key: data_streams
+  label: Data Streams
+  description: Continuous event feeds for real-time analysis
+  kind: streaming
+  gloss_ref: data_streams
+  deprecated: false
+
+- key: apache_spark
+  label: Apache Spark
+  description: Distributed processing engine for batch/stream
+  kind: platform
+  gloss_ref: apache_spark
+  deprecated: false
+
+- key: hadoop
+  label: Apache Hadoop
+  description: Distributed storage/processing ecosystem
+  kind: platform
+  gloss_ref: hadoop
+  deprecated: false
+
+- key: business_glossary
+  label: Business Glossary
+  description: Curated noun terms to reduce ambiguity
+  kind: knowledge
+  gloss_ref: business_glossary
+  deprecated: false
+
+- key: concept_modeling
+  label: Concept Modeling
+  description: Technique to organize domain vocabulary/relationships
+  kind: technique
+  gloss_ref: concept_modeling
+  deprecated: false
+
+- key: data_analysis_process
+  label: Data Analysis Process
+  description: Problem→metrics→data→analysis→communication
+  kind: process
+  gloss_ref: data_analysis_process
+  deprecated: false
+
+- key: sql
+  label: SQL
+  description: Standard query language for relational data
+  kind: language
+  gloss_ref: sql
+  deprecated: false
+
+- key: python
+  label: Python
+  description: General-purpose language for analytics/ETL
+  kind: language
+  gloss_ref: python
+  deprecated: false
+
+- key: r_language
+  label: R
+  description: Statistics/visualization language and environment
+  kind: language
+  gloss_ref: r_language
+  deprecated: false
+
+- key: json
+  label: JSON
+  description: Lightweight structured data format for APIs
+  kind: format
+  gloss_ref: json
+  deprecated: false
+
+- key: xlsx
+  label: XLSX
+  description: Excel workbook for tabular data
+  kind: format
+  gloss_ref: xlsx
+  deprecated: false
+
+- key: delimited_text_file
+  label: Delimited Text File
+  description: CSV/TSV plain-text tables with header
+  kind: format
+  gloss_ref: delimited_text_file
+  deprecated: false
+
+- key: cbap_certification
+  label: CBAP Certification
+  description: IIBA’s advanced credential for experienced BAs
+  kind: credential
+  gloss_ref: cbap_certification
+  deprecated: false
+
+- key: iiba
+  label: IIBA
+  description: Professional association maintaining BA standards
+  kind: organization
+  gloss_ref: iiba
+  deprecated: false
+
+- key: generative_ai_for_analysts
+  label: Generative AI for Analysts
+  description: GenAI use cases in analysis with guardrails
+  kind: capability
+  gloss_ref: generative_ai_for_analysts
+  deprecated: false
+
+- key: lineage
+  label: Lineage
+  description: Recorded ancestry of data and artifacts
+  kind: governance
+  gloss_ref: lineage
+  deprecated: false
+
+- key: requirements_levels
+  label: Requirements Levels
+  description: Business → Stakeholder → Solution → Transition
+  kind: requirements
+  gloss_ref: requirements_levels
+  deprecated: false
+
+- key: elicitation
+  label: Elicitation & Collaboration
+  description: Uncover needs and align understanding
+  kind: practice
+  gloss_ref: elicitation
+  deprecated: false
+
+- key: given_when_then
+  label: Given–When–Then
+  description: Behavior-driven acceptance criteria format
+  kind: technique
+  gloss_ref: given_when_then
+  deprecated: false
+
+- key: solution_evaluation
+  label: Solution Evaluation
+  description: Assess solution performance and value
+  kind: quality
+  gloss_ref: solution_evaluation
+  deprecated: false
+
+- key: strategy_analysis
+  label: Strategy Analysis
+  description: Define current/future states and goals
+  kind: planning
+  gloss_ref: strategy_analysis
+  deprecated: false
+
+- key: data_sources
+  label: Data Sources
+  description: Origins: DBs, files, APIs, streams, etc.
+  kind: source
+  gloss_ref: data_sources
+  deprecated: false
+
+- key: data_ecosystem
+  label: Data Ecosystem
+  description: Interconnected people, tools, and processes
+  kind: concept
+  gloss_ref: data_ecosystem
+  deprecated: false
+
+- key: analyst_skills
+  label: Analyst Skills
+  description: Blend of technical, functional, and soft skills
+  kind: skills
+  gloss_ref: analyst_skills
+  deprecated: false
+
+- key: requirements_lifecycle_management
+  label: Requirements Life Cycle Mgmt
+  description: Trace, maintain, and approve requirements
+  kind: governance
+  gloss_ref: requirements_lifecycle_management
+  deprecated: false

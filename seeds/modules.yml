@@ -1,0 +1,193 @@
+# Canonical list of modules (repos) in the constellation.
+# Fields: id (snake_case), name, emoji, orbit, status, tags[], glyphs[], repo_url, pages_url, owners[]
+
+- id: fourtwenty_analytics
+  name: FourTwenty Analytics (Hub)
+  emoji: "⚛️"
+  orbit: elemental-system
+  status: active
+  tags: [hub, seeds, portfolio, index]
+  glyphs: [lineage]
+  repo_url: https://github.com/zbreeden/FourTwentyAnalytics
+  pages_url: https://zbreeden.github.io/FourTwentyAnalytics/
+  owners: [zach]
+
+# ── Core Systems ────────────────────────────────────────────────────────────────
+- id: launch_model
+  name: Launch Model
+  emoji: "🚀"
+  orbit: core
+  status: active
+  tags: [portfolio, entry, core]
+  glyphs: [launch, anchor]
+  repo_url: https://github.com/zbreeden/launch-model
+  pages_url: https://zbreeden.github.io/launch-model/
+  owners: [zach]
+
+- id: archive_model
+  name: Archive Model
+  emoji: "🫀"
+  orbit: core
+  status: active
+  tags: [records, glossary, tags, statuses]
+  glyphs: [archive, lineage]
+  repo_url: https://github.com/zbreeden/archive-model
+  pages_url: https://zbreeden.github.io/archive-model/
+  owners: [zach]
+
+- id: signal_model
+  name: Signal Model
+  emoji: "📡"
+  orbit: core
+  status: active
+  tags: [telemetry, ga4, gtm, ux]
+  glyphs: [signal]
+  repo_url: https://github.com/zbreeden/signal-model
+  pages_url: https://zbreeden.github.io/signal-model/
+  owners: [zach]
+
+# ── Delivery & Insight ─────────────────────────────────────────────────────────
+- id: evaluator_model
+  name: Evaluator Model
+  emoji: "🧮"
+  orbit: delivery-insight
+  status: developing
+  tags: [dashboards, reporting, insight]
+  glyphs: [evaluator]
+  repo_url: https://github.com/zbreeden/evaluator-model
+  pages_url: https://zbreeden.github.io/evaluator-model/
+  owners: [zach]
+
+- id: anchor_model
+  name: Anchor Model
+  emoji: "⚓️"
+  orbit: delivery-insight
+  status: developing
+  tags: [portfolio, anchors]
+  glyphs: [anchor]
+  repo_url: https://github.com/zbreeden/anchor-model
+  pages_url: https://zbreeden.github.io/anchor-model/
+  owners: [zach]
+
+- id: bank_model
+  name: The Bank
+  emoji: "💳"
+  orbit: delivery-insight
+  status: developing
+  tags: [delivery, demos, readiness]
+  glyphs: [bank]
+  repo_url: https://github.com/zbreeden/bank-model
+  pages_url: https://zbreeden.github.io/bank-model/
+  owners: [zach]
+
+- id: mirror_model
+  name: Mirror
+  emoji: "🪞"
+  orbit: delivery-insight
+  status: seed
+  tags: [showcase, QA, reflection]
+  glyphs: [mirror]
+  repo_url: https://github.com/zbreeden/mirror-model
+  pages_url: https://zbreeden.github.io/mirror-model/
+  owners: [zach]
+
+# ── Growth & Experimentation ───────────────────────────────────────────────────
+- id: grower_model
+  name: Grower Model
+  emoji: "🌱"
+  orbit: growth-experiment
+  status: developing
+  tags: [optimization, loops, growth]
+  glyphs: [grower]
+  repo_url: https://github.com/zbreeden/grower-model
+  pages_url: https://zbreeden.github.io/grower-model/
+  owners: [zach]
+
+- id: player_model
+  name: The Player
+  emoji: "🎲"
+  orbit: growth-experiment
+  status: developing
+  tags: [scenarios, probability, sims]
+  glyphs: [player]
+  repo_url: https://github.com/zbreeden/player-model
+  pages_url: https://zbreeden.github.io/player-model/
+  owners: [zach]
+
+- id: gambler_model
+  name: Gambler
+  emoji: "🎰"
+  orbit: growth-experiment
+  status: seed
+  tags: [risk, payoff, monte-carlo]
+  glyphs: [gambler]
+  repo_url: https://github.com/zbreeden/gambler-model
+  pages_url: https://zbreeden.github.io/gambler-model/
+  owners: [zach]
+
+- id: story_model
+  name: The Story
+  emoji: "📖"
+  orbit: growth-experiment
+  status: developing
+  tags: [narrative, triggers, UX]
+  glyphs: [story]
+  repo_url: https://github.com/zbreeden/story-model
+  pages_url: https://zbreeden.github.io/story-model/
+  owners: [zach]
+
+- id: coach_model
+  name: The Coach (RoutineIQ)
+  emoji: "💪"
+  orbit: growth-experiment
+  status: developing
+  tags: [fitness, routineiq, signals]
+  glyphs: [coach, trainer]
+  repo_url: https://github.com/zbreeden/coach-model
+  pages_url: https://zbreeden.github.io/coach-model/
+  owners: [zach]
+
+- id: trainer_model
+  name: Trainer
+  emoji: "🏋️"
+  orbit: growth-experiment
+  status: seed
+  tags: [practice, drills]
+  glyphs: [trainer]
+  repo_url: https://github.com/zbreeden/trainer-model
+  pages_url: https://zbreeden.github.io/trainer-model/
+  owners: [zach]
+
+# ── Orbit Ops ──────────────────────────────────────────────────────────────────
+- id: orbiter_model
+  name: Orbiter
+  emoji: "🛰️"
+  orbit: orbit-ops
+  status: developing
+  tags: [automation, pulses, actions]
+  glyphs: [orbiter]
+  repo_url: https://github.com/zbreeden/orbiter-model
+  pages_url: https://zbreeden.github.io/orbiter-model/
+  owners: [zach]
+
+- id: firm_model
+  name: Firm Model
+  emoji: "🏢"
+  orbit: orbit-ops
+  status: seed
+  tags: [org, hub, policy]
+  glyphs: [firm]
+  repo_url: https://github.com/zbreeden/firm-model
+  pages_url: https://zbreeden.github.io/firm-model/
+  owners: [zach]
+
+- id: catalyst_model
+  name: Catalyst
+  emoji: "⚙️"
+  orbit: orbit-ops
+  status: developing
+  tags: [build, release, tooling]
+  glyphs: [catalyst]
+  repo_url: https://github.com/zbreeden/catalyst-model
+  pages_url: https://zbreeden.github.io/catalyst-model/
+  owners: [zach]

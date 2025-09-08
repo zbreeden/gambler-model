@@ -1,0 +1,33 @@
+repos:
+  - owner: zbreeden
+    name: launch-model
+  - owner: zbreeden
+    name: archive-model
+  - owner: zbreeden
+    name: signal-model
+  - owner: zbreeden
+    name: evaluator-model
+  - owner: zbreeden
+    name: anchor-model
+  - owner: zbreeden
+    name: bank-model
+  - owner: zbreeden
+    name: mirror-model
+  - owner: zbreeden
+    name: grower-model
+  - owner: zbreeden
+    name: player-model
+  - owner: zbreeden
+    name: gambler-model
+  - owner: zbreeden
+    name: story-model
+  - owner: zbreeden
+    name: coach-model
+  - owner: zbreeden
+    name: trainer-model
+  - owner: zbreeden
+    name: orbiter-model
+  - owner: zbreeden
+    name: firm-model
+  - owner: zbreeden
+    name: catalyst-model
