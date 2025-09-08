@@ -4,7 +4,6 @@ on:
     - cron: '30 13 * * 4'   # Thu 09:30 ET
     - cron: '00 13 * * 0'   # Sun 09:00 ET
   workflow_dispatch: {}
-
 jobs:
   run-scan:
     runs-on: ubuntu-latest
@@ -23,11 +22,15 @@ jobs:
 
       - name: Run Gambler NFL scan (dated + manifest)
         env:
-          GAMBLER_SEASON: "2025"
-          GAMBLER_WEEK: "1"
-          GAMBLER_SIMS: "50000"
-          SKIP_LATEST: "1"
-          GAMBLER_KEY: ${{ env.GAMBLER_KEY }}
+        GAMBLER_SEASON: "2025"
+        GAMBLER_WEEK: "1"
+        GAMBLER_SIMS: "50000"
+        SKIP_LATEST: "1"
+        GAMBLER_KEY: ${{ env.GAMBLER_KEY }}
+        ORIGIN_KEY: "the_gambler"
+        ORIGIN_LABEL: "The Gambler"
+        ORIGIN_EMOJI: "🎲"
+        ORIGIN_URL: "https://zbreeden.github.io/<your-gambler-repo>/"
         run: python scripts/gambler_scan_nfl.py
 
       - name: Commit payloads
