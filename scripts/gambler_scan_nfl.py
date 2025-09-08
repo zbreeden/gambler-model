@@ -4,6 +4,13 @@ from pathlib import Path
 import numpy as np
 
 # ---------------- Config ----------------
+import os
+
+ORIGIN_KEY   = os.getenv("ORIGIN_KEY",   "the_gambler")
+ORIGIN_LABEL = os.getenv("ORIGIN_LABEL", "The Gambler")
+ORIGIN_EMOJI = os.getenv("ORIGIN_EMOJI", "🎲")
+ORIGIN_URL   = os.getenv("ORIGIN_URL",   "https://<your-gambler-site-or-repo>")
+
 ET = dt.timezone(dt.timedelta(hours=-4))  # For demo; use zoneinfo for DST accuracy
 now = dt.datetime.now(ET)
 SEASON = int(os.getenv("GAMBLER_SEASON", "2025"))
@@ -77,12 +84,21 @@ for i, r in enumerate(rows, 1):
     r["rank"] = i
 
 payload = {
-  "broadcast_key": "gambler_top3",
-  "season": SEASON, "week": WEEK, "sport": SPORT,
-  "generated_at": now.isoformat(),
-  "source": "the_gambler",
-  "items": rows[:3]
+    "broadcast_key": "gambler_top3",
+    "season": SEASON,
+    "week": WEEK,
+    "sport": SPORT,
+    "generated_at": now.isoformat(),
+    "source": ORIGIN_KEY,                 # keep source for backward-compat
+    "origin": {                           # <- new
+        "key": ORIGIN_KEY,
+        "label": ORIGIN_LABEL,
+        "emoji": ORIGIN_EMOJI,
+        "url": ORIGIN_URL
+    },
+    "items": rows[:3]
 }
+
 
 # ---------------- Outputs ----------------
 out_dir = Path("signals")
