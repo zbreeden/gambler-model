@@ -22,15 +22,15 @@ jobs:
 
       - name: Run Gambler NFL scan (dated + manifest)
         env:
-        GAMBLER_SEASON: "2025"
-        GAMBLER_WEEK: "1"
-        GAMBLER_SIMS: "50000"
-        SKIP_LATEST: "1"
-        GAMBLER_KEY: ${{ env.GAMBLER_KEY }}
-        ORIGIN_KEY: "the_gambler"
-        ORIGIN_LABEL: "The Gambler"
-        ORIGIN_EMOJI: "🎲"
-        ORIGIN_URL: "https://zbreeden.github.io/<your-gambler-repo>/"
+          GAMBLER_SEASON: "2025"
+          GAMBLER_WEEK: "1"
+          GAMBLER_SIMS: "50000"
+          SKIP_LATEST: "1"
+          GAMBLER_KEY: ${{ env.GAMBLER_KEY }}
+          ORIGIN_KEY: "the_gambler"
+          ORIGIN_LABEL: "The Gambler"
+          ORIGIN_EMOJI: "🎲"
+          ORIGIN_URL: "https://zbreeden.github.io/gambler-model/"
         run: python scripts/gambler_scan_nfl.py
 
       - name: Commit payloads
