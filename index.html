@@ -4,40 +4,33 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>FourTwenty • The Gambler</title>
-  <meta name="description" content="Risk & odds — expected value, variance, and portfolio trade-offs.">
-
-  <!-- Push context BEFORE GTM so page_view can include it -->
+  <meta name="description" content="Risk desk for scenarios, expected value, and probability simulations.">
   <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ site_area: 'gambler' });
   </script>
-
-  <!-- Google Tag Manager (GTM only; same container as main site) -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVC4SNLB');  /* ← your GTM ID */
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WVC4SNLB');
   </script>
-
   <style>
-    :root{--bg:#0b1220;--panel:#0f1728;--text:#e6edf3;--muted:#9fb0d1;--border:#223052;--accent:#7aa2ff}
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .shell{max-width:980px;margin:0 auto;padding:28px 20px}
-    header{display:flex;justify-content:space-between;align-items:center;padding:6px 0 18px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#121b2f;color:var(--text)}
-    .btn:hover{background:#16243a}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin:14px 0}
+    :root{--bg:#0b1220;--panel:#111a2e;--text:#e6edf3;--muted:#9fb0d1;--border:#223052;--accent:#ffc857}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+    .shell{max-width:960px;margin:0 auto;padding:28px 20px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:700;font-size:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#1a2642;color:var(--text);cursor:pointer}
+    .btn:hover{background:#223356}
+    .hero{margin:28px 0;display:grid;gap:20px}
     .panel{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:18px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:14px}
+    h1{margin:0;font-size:26px}
+    h2{margin-top:0}
     .muted{color:var(--muted)}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}}
-    code{background:#0f1728;border:1px solid var(--border);padding:2px 6px;border-radius:8px}
-    footer{margin:28px 0;color:var(--muted);font-size:13px}
+    footer{margin:28px 0;color:var(--muted);font-size:13px;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
   </style>
 </head>
 <body>
@@ -45,73 +38,65 @@
 
 <div class="shell">
   <header>
-    <div class="brand">FourTwenty • The Gambler</div>
+    <div class="brand">🎲 FourTwenty • The Gambler</div>
     <nav>
-      <!-- Back to main site root; works with user/org Pages and custom domains -->
-      <a class="btn" href="https://zbreeden.github.io/FourTwentyAnalytics/" onclick="signalClick('back_to_main','Back to FourTwenty','header')">← Back to FourTwenty</a>
+      <a class="btn" href="https://zbreeden.github.io/FourTwentyAnalytics/">← Back to FourTwenty</a>
     </nav>
   </header>
 
   <section class="hero">
     <div>
-      <h1 style="margin:0 0 8px">Expected values, variances, and probability sampling.</h1>
-      <p class="muted">A tiny site + playground that pushes PII-free events into <code>dataLayer</code>. Map in GTM, verify in GA4 DebugView, and iterate on your taxonomy.</p>
+      <h1>Welcome to The Gambler</h1>
+      <p class="muted">A sandbox for risk and reward. Simulate expected values, trigger sample events, and see how your bets land in GA4.</p>
       <div class="grid">
-        <a class="btn" href="#" onclick="signalClick('cta_get_started','Get Started','hero');return false;">Trigger CTA event</a>
-        <a class="btn" href="#" onclick="pushPage('home','Home');return false;">Trigger virtual page_view</a>
-        <a class="btn" href="./playground/ux_playground.html" onclick="signalClick('open_playground','UX Playground','hero')">Open UX Playground →</a>
+        <button class="btn" onclick="placeBet('coin_flip')">Flip a Coin</button>
+        <button class="btn" onclick="placeBet('roll_dice')">Roll Dice</button>
+        <button class="btn" onclick="placeBet('parlay')">Simulate Parlay</button>
       </div>
     </div>
-
     <div class="panel">
-      <h3 style="margin:6px 0 8px">Setup checklist</h3>
-      <ol style="margin:0 0 8px 18px; padding:0; line-height:1.6">
-        <li>Use the same GTM container as your main site (<code>GTM-WVC4SNLB</code>) for unified tagging.</li>
-        <li>Segment by <code>site_area</code> (already pushed as <code>'signal'</code> on this page).</li>
-        <li>Verify events in GA4 <em>DebugView</em> while clicking around.</li>
-      </ol>
-      <p class="muted" style="margin:8px 0 0">Links and buttons below emit sample events: <code>cta_click</code>, <code>nav_search</code>, <code>form_submit</code>, <code>page_view</code>.</p>
+      <h2>Current Broadcast</h2>
+      <p class="muted">The Gambler streams its latest picks.</p>
+      <a class="btn" href="./latest.json" target="_blank">View latest.json →</a>
     </div>
   </section>
 
   <section class="panel">
-    <h3 style="margin:6px 0 8px">Live test console</h3>
-    <p class="muted">Quick buttons that push events into <code>dataLayer</code> so Tag Assistant can see activity.</p>
+    <h2>Live Test Console</h2>
+    <p class="muted">Push example events into <code>dataLayer</code> for Tag Assistant and DebugView.</p>
     <div class="grid">
-      <button class="btn" onclick="signalClick('cta_signup','Sign up','console')">CTA: Sign up</button>
-      <button class="btn" onclick="pushForm('lead_form_v1','Lead form')">Form submit</button>
-      <button class="btn" onclick="pushSearch('pricing',12)">Search: pricing</button>
-      <button class="btn" onclick="pushPage('pricing','Pricing')">Virtual page_view: Pricing</button>
-    </div>
-    <div style="margin-top:12px">
-      <a class="btn" href="https://zbreeden.github.io/FourTwentyAnalytics/" onclick="signalClick('back_to_main_footer','Back to FourTwenty','footer')">← Back to FourTwenty</a>
+      <button class="btn" onclick="signalClick('cta_signup','Sign Up','console')">CTA: Sign up</button>
+      <button class="btn" onclick="pushForm('lead_form','Lead Form')">Form Submit</button>
+      <button class="btn" onclick="pushSearch('odds',6)">Search: odds</button>
+      <button class="btn" onclick="pushPage('strategy','Strategy Page')">Virtual Page View</button>
     </div>
   </section>
 
-  <footer>MIT licensed. Built for fast iteration on analytics events.</footer>
+  <footer>MIT licensed • Built for probability play & analytics iteration</footer>
 </div>
 
 <script>
-  // Minimal helpers for demo events
   function signalClick(id,text,loc){
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event:'cta_click', cta_id:id, cta_text:text, location:loc });
-    console.log('cta_click', {id,text,loc});
+    dataLayer.push({event:'cta_click',cta_id:id,cta_text:text,location:loc});
+    console.log('cta_click',{id,text,loc});
   }
   function pushForm(id,name){
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event:'form_submit', form_id:id, form_name:name, fields_count:5 });
-    console.log('form_submit', {id,name});
+    dataLayer.push({event:'form_submit',form_id:id,form_name:name});
+    console.log('form_submit',{id,name});
   }
   function pushSearch(q,n){
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event:'nav_search', query:q, results_count:n });
-    console.log('nav_search', {q,n});
+    dataLayer.push({event:'nav_search',query:q,results_count:n});
+    console.log('nav_search',{q,n});
   }
   function pushPage(id,title){
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event:'page_view', page_id:id, page_title:title });
-    console.log('page_view', {id,title});
+    dataLayer.push({event:'page_view',page_id:id,page_title:title});
+    console.log('page_view',{id,title});
+  }
+  function placeBet(type){
+    const outcomes={coin_flip:['Heads','Tails'],roll_dice:[1,2,3,4,5,6],parlay:['Win','Lose']};
+    const result=outcomes[type][Math.floor(Math.random()*outcomes[type].length)];
+    dataLayer.push({event:'bet_sim',bet_type:type,result:result});
+    alert(`Your ${type.replace('_',' ')} result: ${result}`);
   }
 </script>
 </body>
