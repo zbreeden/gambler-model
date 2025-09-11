@@ -1,0 +1,27 @@
+{
+  "id": "2025-09-10T20:00:00Z-gambler-broadcast-seed",
+  "ts_utc": "2025-09-10T20:00:00Z",
+  "date": "2025-09-10",
+  "module": "The Gambler",
+  "repo": "gambler-model",
+  "title": "Master star broadcast seed initialized",
+  "summary": "Bootstrapped constellation broadcasting: schema, nightly pulse, and Signal renderer.",
+  "tags": ["broadcasting", "schema", "renderer", "pulse"],
+  "rating": "high",
+  "origin": {
+    "name": "The Gambler",
+    "url": "https://zbreeden.github.io/gambler-model/",
+    "emoji": "🎰"
+  },
+  "links": {
+    "readme": "https://github.com/zbreeden/gambler-model#readme",
+    "page": "https://zbreeden.github.io/gambler-model/",
+    "data": "https://github.com/zbreeden/gambler-model/tree/main/signals",
+    "runbook": "https://github.com/zbreeden/gambler-model/blob/main/RUNBOOK.md"
+  },
+  "payload": {
+    "notes": "This is the top-level aggregator in The Gambler. Nightly pulse pulls latest.json from each star."
+  },
+  "checksum": "",
+  "version": "1.0.0"
+}
