@@ -1,0 +1,171 @@
+# schema/funnel_spec.yml
+version: 1
+defaults:
+  timezone: "UTC"
+  sla:
+    breach_severity: warn         # warn | error
+    breach_tag: "sla_breach"      # tag your validator can emit
+  metrics:
+    # your validator can compute these from timestamps it sees in data
+    - id: lead_time_days
+      description: "Time from first funnel step to first steady_state step"
+    - id: cycle_time_days
+      description: "Time spent between non-terminal steps (excludes paused/dormant)"
+    - id: time_in_step_days
+      description: "Per-step dwell time"
+
+funnels:
+  # ---------------------------------------------------------------------------
+  - id: launch_lifecycle
+    label: "Module Lifecycle"
+    entity: "module"
+    key_field: "status"    # your modules.yml uses these keys
+    description: "End-to-end lifecycle for constellation modules (FourTwenty)."
+    steps:
+      - id: queued
+        label: "Queued"
+        requires: ["proposal_issue_open", "rough_tshirt_size"]
+        next: ["seed", "scoped"]
+        sla: { max_days_in_step: 14, breach_severity: warn }
+
+      - id: seed
+        label: "Seed"
+        requires: ["repo_created", "readme_stub"]
+        next: ["sprout", "scoped"]
+        sla: { max_days_in_step: 7 }
+
+      - id: scoped
+        label: "Scoped"
+        requires: ["problem_statement", "success_metrics", "high_level_arch", "mvp_backlog"]
+        next: ["sprout", "developing", "paused"]
+        sla: { max_days_in_step: 14 }
+
+      - id: sprout
+        label: "Sprout"
+        requires: ["scaffold_ready", "seeds_defined", "hello_world_demo"]
+        next: ["developing", "budding", "dormant"]
+        sla: { max_days_in_step: 14 }
+
+      - id: developing
+        label: "Developing"
+        requires: ["milestone_open:mvp", "tests_smoke", "seeds_defined", "scaffold_ready"]
+        next: ["budding", "bloom", "paused", "dormant"]
+        sla: { max_days_in_step: 30 }
+
+      - id: experiment
+        label: "Experiment"
+        requires: ["hypothesis_defined", "timebox<=14d", "measure_of_success"]
+        next: ["developing", "paused", "fired"]
+        sla: { max_days_in_step: 14 }
+
+      - id: budding
+        label: "Budding"
+        requires: ["etl_path", "unit_tests_min", "readme_fragments", "preview_link"]
+        next: ["pilot", "bloom", "dormant"]
+        sla: { max_days_in_step: 21 }
+
+      - id: pilot
+        label: "Pilot"
+        requires: ["pilot_users_identified", "feedback_cycle_running", "error_budget_defined"]
+        next: ["bloom", "cooled", "paused"]
+        sla: { max_days_in_step: 21 }
+
+      - id: bloom
+        label: "Bloom"
+        requires: ["ci_green", "dashboard_live", "api_or_export", "lineage_tracked"]
+        next: ["audit", "active", "dormant"]
+        sla: { max_days_in_step: 7 }
+
+      - id: audit
+        label: "Audit"
+        requires: ["qa_checklist_pass", "security_scan_clean", "a11y_scan>=AA", "perf_budget_met"]
+        next: ["active", "paused"]
+        sla: { max_days_in_step: 7 }
+
+      - id: active
+        label: "Active"
+        steady_state: true
+        requires:
+          - "README + seeds current"
+          - "artifact live (Pages/demo/API)"
+          - "owner_assigned"
+          - "meaningful_update<=30d"
+          - "analytics_wired"
+        exit_to: ["migrating", "cooled", "paused", "dormant", "overflowing"]
+
+      - id: migrating
+        label: "Migrating"
+        requires: ["migration_plan", "shadow_or_dual_write", "rollback_checkpoint"]
+        next: ["active", "cooled", "paused"]
+        sla: { max_days_in_step: 30 }
+
+      - id: cooled
+        label: "Cooled"
+        requires: ["maintenance_only", "no_new_features>=60d", "owner_assigned"]
+        next: ["active", "paused", "dormant"]
+
+      - id: overflowing
+        label: "Overflowing"
+        requires: ["backlog_exceeds_threshold", "incident_open_or_error_rate_high", "stabilization_plan"]
+        next: ["active", "cooled", "paused"]
+
+      - id: incident
+        label: "Incident"
+        urgent: true
+        requires: ["sev_ticket_open", "owner_oncall", "comms_posted", "status_page_updated"]
+        next: ["active", "cooled", "overflowing"]
+        sla: { max_hours_in_step: 4, breach_severity: error }
+
+      - id: paused
+        label: "Paused"
+        requires: ["pause_notice_in_readme", "no_release_planned<30d"]
+        next: ["active", "cooled", "dormant"]
+
+      - id: dormant
+        label: "Dormant"
+        requires: ["archived_notice"]
+        next: ["sprout"]
+
+      - id: sunset_pending
+        label: "Sunset Pending"
+        requires: ["eol_announcement", "replacement_or_migration_path", "target_eol_date"]
+        next: ["fired", "paused"]
+
+      - id: fired
+        label: "Fired"
+        terminal: true
+        requires: ["final_release_tag", "replacement_or_redirect_noted", "archive_or_readonly"]
+
+  # ---------------------------------------------------------------------------
+  - id: workflow_run
+    label: "GitHub Workflow Run"
+    entity: "workflow_run"
+    key_field: "status/conclusion"
+    description: "CI pipeline health funnel for Actions runs."
+    steps:
+      - id: queued
+        label: "Queued"
+        next: ["in_progress", "cancelled"]
+        sla: { max_minutes_in_step: 10 }
+
+      - id: in_progress
+        label: "In Progress"
+        next: ["success", "failure", "cancelled", "timed_out"]
+        sla: { max_minutes_in_step: 20 }
+
+      - id: success
+        label: "Success"
+        terminal: true
+
+      - id: failure
+        label: "Failure"
+        terminal: true
+        remediation: ["open_incident", "notify_owner", "require_postmortem"]
+
+      - id: cancelled
+        label: "Cancelled"
+        terminal: true
+
+      - id: timed_out
+        label: "Timed Out"
+        terminal: true

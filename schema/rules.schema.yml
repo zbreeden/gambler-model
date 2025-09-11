@@ -1,0 +1,40 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "rules.yml schema"
+type: object
+additionalProperties: false
+required: [version, rules]
+properties:
+  version:
+    type: integer
+    minimum: 1
+  rules:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [id, severity, description, checks]
+      properties:
+        id:
+          type: string
+          pattern: "^[a-z0-9_]+$"
+        severity:
+          type: string
+          enum: [error, warn, info, policy]
+        description:
+          type: string
+          minLength: 1
+        enabled:
+          type: boolean
+          default: true
+        checks:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            minLength: 1
+        tags:
+          type: array
+          items:
+            type: string
+            pattern: "^[a-z0-9_]+$"

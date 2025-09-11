@@ -1,0 +1,55 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "registry.yml schema"
+type: object
+additionalProperties: false
+required: [version, default_seeds, repos]
+
+properties:
+  version:
+    type: integer
+    minimum: 1
+
+  default_seeds:
+    $ref: "#/$defs/seedMap"
+
+  repos:
+    type: array
+    minItems: 1
+    items:
+      $ref: "#/$defs/repoSpec"
+
+$defs:
+  seedEntry:
+    type: object
+    additionalProperties: false
+    required: [path, schema, required]
+    properties:
+      path:
+        type: string
+        pattern: "^(seeds|schema)/[A-Za-z0-9._/\\-]+\\.(ya?ml)$"
+      schema:
+        type: string
+        pattern: "^schema/[A-Za-z0-9._/\\-]+\\.(ya?ml)$"
+      required:
+        type: boolean
+
+  seedMap:
+    type: object
+    additionalProperties: false
+    minProperties: 1
+    patternProperties:
+      "^[a-z0-9_]+$": { $ref: "#/$defs/seedEntry" }
+
+  repoSpec:
+    type: object
+    additionalProperties: false
+    required: [owner, name, seeds]
+    properties:
+      owner:
+        type: string
+        pattern: "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+      name:
+        type: string
+        pattern: "^[A-Za-z0-9._-]+$"
+      seeds:
+        $ref: "#/$defs/seedMap"

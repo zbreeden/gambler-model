@@ -1,0 +1,26 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "tags seed"
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required: [key, label, description, kind, gloss_ref, deprecated]
+  properties:
+    key:
+      type: string
+      pattern: "^[a-z0-9_]+$"
+      description: "Stable snake_case key"
+    label:
+      type: string
+      minLength: 1
+    description:
+      type: string
+      minLength: 1
+    kind:
+      type: string
+      enum: ["module","topic","kpi","status","orbit","tech"]
+    gloss_ref:
+      type: string
+      pattern: "^[a-z0-9_]+$"
+    deprecated:
+      type: boolean

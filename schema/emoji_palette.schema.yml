@@ -1,0 +1,29 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "emoji_palette.yml schema"
+type: object
+additionalProperties: false
+
+# require at least status_icons; allow other icon groups as optional
+required: [status_icons]
+properties:
+  status_icons:
+    $ref: "#/$defs/iconMap"
+  orbit_icons:
+    $ref: "#/$defs/iconMap"
+  module_icons:
+    $ref: "#/$defs/iconMap"
+  tech_icons:
+    $ref: "#/$defs/iconMap"
+
+$defs:
+  # Generic map of snake_case keys -> emoji (string).
+  # We don't regex-match emoji here because cross-platform emoji regex is brittle;
+  # validators can enforce stricter checks separately if desired.
+  iconMap:
+    type: object
+    minProperties: 1
+    additionalProperties: false
+    patternProperties:
+      "^[a-z0-9_]+$":
+        type: string
+        minLength: 1

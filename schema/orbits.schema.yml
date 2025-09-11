@@ -1,0 +1,22 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "orbits.yml schema"
+type: array
+items:
+  type: object
+  additionalProperties: false
+  required: [id, label, emoji, order]
+  properties:
+    id:
+      type: string
+      pattern: "^[a-z0-9_]+$"
+    label:
+      type: string
+      minLength: 1
+    emoji:
+      type: string
+      minLength: 1
+    order:
+      type: integer
+      minimum: 0
+    description:
+      type: string

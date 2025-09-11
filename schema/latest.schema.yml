@@ -1,0 +1,84 @@
+# schema/latest.schema.yml
+title: "latest.json schema"
+type: object
+additionalProperties: false
+
+required:
+  - id
+  - ts_utc
+  - module
+  - repo
+  - title
+  - summary
+  - rating
+  - origin
+  - links
+  - payload
+
+properties:
+  id:
+    type: string
+    description: "Globally unique id, e.g. YYYYMMDDTHHMMSSZ-<repo>-<slug>"
+    pattern: "^[a-z0-9\\-T:Z_]+$"
+  ts_utc:
+    type: string
+    format: date-time
+    description: "UTC timestamp when this broadcast was created"
+  date:
+    type: string
+    description: "Convenience YYYY-MM-DD derived from ts_utc"
+    pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+  module:
+    type: string
+    description: "Human-facing module/sun name, e.g. The Signal"
+  repo:
+    type: string
+    description: "Repo slug, e.g. signal-model"
+    pattern: "^[a-z0-9\\-]+$"
+  title:
+    type: string
+  summary:
+    type: string
+  tags:
+    type: array
+    items:
+      type: string
+  rating:
+    type: string
+    enum: [critical, high, normal, mundane]
+    description: "Broadcast severity/importance"
+  origin:
+    type: object
+    additionalProperties: false
+    required: [name, url, emoji]
+    properties:
+      name:
+        type: string
+        description: "Branding block title, e.g. FourTwenty Analytics"
+      url:
+        type: string
+        description: "Canonical page for this module/repo"
+      emoji:
+        type: string
+        description: "Single emoji glyph for the module"
+  links:
+    type: object
+    additionalProperties: false
+    properties:
+      readme:
+        type: string
+      page:
+        type: string
+      data:
+        type: string
+      runbook:
+        type: string
+  payload:
+    type: object
+    description: "Free-form JSON payload for module-specific details"
+  checksum:
+    type: string
+    description: "Optional content hash for integrity checks"
+  version:
+    type: string
+    description: "Semantic version of this broadcast schema/content"

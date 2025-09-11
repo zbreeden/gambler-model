@@ -1,0 +1,43 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "seedset.yml schema"
+type: object
+additionalProperties: false
+
+required: [files]
+properties:
+  # Required: the files to fan-out into each repo (relative paths)
+  files:
+    type: array
+    minItems: 1
+    items:
+      type: string
+      # allow common roots + common extensions you’re using
+      pattern: "^(seeds|schema|signals|root|data|scripts|web|\\.github)/[A-Za-z0-9._/\\-]+\\.(ya?ml|json|md|html|js|csv)$"
+
+  # Optional: directories to ensure exist before copying
+  dirs:
+    type: array
+    items:
+      type: string
+      pattern: "^(seeds|schema|signals|root|data|scripts|web|\\.github)(/[A-Za-z0-9._\\-]+)*$"
+
+  # Optional: explicit copy mappings (e.g., from a templates folder)
+  copy:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [from, to]
+      properties:
+        from:
+          type: string
+          pattern: "^(templates|root|schema|seeds|web|scripts|data)/[A-Za-z0-9._/\\-]+$"
+        to:
+          type: string
+          pattern: "^[A-Za-z0-9._/\\-]+$"
+
+  # Optional: token replacements your scaffolder can apply (e.g., owner/repo)
+  variables:
+    type: object
+    additionalProperties:
+      type: string
