@@ -1,17 +1,17 @@
 {
-  "id": "2025-09-10T20:00:00Z-gambler-broadcast-seed",
-  "ts_utc": "2025-09-10T20:00:00Z",
-  "date": "2025-09-10",
-  "module": "The Gambler",
-  "repo": "gambler-model",
-  "title": "Master star broadcast seed initialized",
-  "summary": "Bootstrapped constellation broadcasting: schema, nightly pulse, and Signal renderer.",
-  "tags": ["broadcasting", "schema", "renderer", "pulse"],
-  "rating": "high",
+  "id": "20250923T022142Z-gambler-model-genesis",
+  "ts_utc": "2025-09-23T02:21:42Z",
+  "date": "2025-09-23",
+  "module": "Gambler Model",
+  "repo": "gambler-model", 
+  "title": "New constellation star initialized",
+  "summary": "Generated module scaffold with seedset distribution and basic broadcast structure.",
+  "tags": ["genesis", "scaffold", "module", "growth-experiment"],
+  "rating": "normal",
   "origin": {
-    "name": "The Gambler",
+    "name": "Gambler Model",
     "url": "https://zbreeden.github.io/gambler-model/",
-    "emoji": "🎰"
+    "emoji": "🎲"
   },
   "links": {
     "readme": "https://github.com/zbreeden/gambler-model#readme",
@@ -20,7 +20,10 @@
     "runbook": "https://github.com/zbreeden/gambler-model/blob/main/RUNBOOK.md"
   },
   "payload": {
-    "notes": "This is the top-level aggregator in The Gambler. Nightly pulse pulls latest.json from each star."
+    "orbit": "growth-experiment",
+    "status": "seed", 
+    "module_key": "gambler_model",
+    "notes": "Initial scaffold created by new-module.sh script. Ready for customization and development."
   },
   "checksum": "",
   "version": "1.0.0"
