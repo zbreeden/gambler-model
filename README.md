@@ -1,47 +1,32 @@
-# 🎲 FourTwenty • The Gambler
+# Gambler Model
 
-**Risk desk for scenarios, expected value, and probability simulations.**  
-The Gambler explores how odds, variance, and trade-offs play out across bets and choices.  
-It doubles as a **GTM/GA4 sandbox**, pushing PII-free events into `dataLayer` for live testing.
+> **The Gambler is the probability sampler**
+
+## 🌌 Constellation Information
+
+- **Module Key**: `gambler_model`  
+- **Repository**: `gambler-model`
+- **Orbit**: `growth-experiment`
+- **Status**: `seed`
+- **Emoji**: 🎲
+
+## 🚀 Quick Start
+
+1. **Review seeds/**: Adapt seeded data for this module
+2. **Configure schemas/**: Update schema definitions as needed  
+3. **Generate signals/**: Create latest.json broadcast file
+4. **Run validation**: `scripts/validate.sh`
+
+## 📡 Broadcasting
+
+This module produces a `signals/latest.json` file conforming to the constellation's broadcast schema. The Signal (📡) aggregates these across all stars.
+
+## 🔗 Constellation Links
+
+- **Hub**: [FourTwenty Analytics](https://github.com/zbreeden/FourTwentyAnalytics)
+- **Archive**: Glossary, tags, and canonical definitions
+- **Signal**: Cross-constellation broadcasting and telemetry
 
 ---
 
-## 🌟 What’s inside
-- **Purpose**  
-  Provide a themed playground for experimenting with probabilities (coin flips, dice, parlays) and mapping those events to analytics.
-- **Artifacts**  
-  - `/playground` → UX Playground for custom event triggers  
-  - `/latest.json` → broadcast of current “top plays” with origin metadata  
-  - `/artifacts` → screenshots, GIFs, sample dashboards  
-  - `/gtm` → container exports  
-  - `/ga4` → debug notes, views
-- **Telemetry**  
-  Unified **GTM container (`GTM-WVC4SNLB`)** across constellation. Events verified in GA4 DebugView.
-
----
-
-## 🚀 Quick start
-1. Clone repo and serve locally:  
-   ```bash
-   python3 -m http.server 5500
-Then open /index.html or /playground/ux_playground.html.
-2. Attach GTM Preview and watch events stream into Tag Assistant.
-3. Validate in GA4 DebugView — look for events such as:
-bet_sim (with bet_type + result)
-cta_click
-form_submit
-nav_search
-virtual page_view
-
-📊 Highlights
-Probability Console → Coin flip, dice roll, parlay simulator (results pushed into dataLayer).
-Broadcast Integration → latest.json publishes The Gambler’s current signals.
-Analytics Demo → Fire sample events (cta_click, form_submit, etc.) to test GTM/GA4 flows.
-BI Views (future) → Expected value charts, variance dashboards, win/loss streak analysis.
-
-🗂 Related modules
-🚀 The Launch – foundation and entry point
-🫀 The Archive – heart and integrity keeper
-📡 The Signal – system nerves, broadcasting signals
-
-⚖️ License MIT — free to use, adapt, and extend.
+*This star is part of the FourTwenty Analytics constellation - a modular analytics sandbox where each repository is a specialized "model" within an orbital system.*
