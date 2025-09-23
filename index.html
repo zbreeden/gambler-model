@@ -1,103 +1,89 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>FourTwenty • The Gambler</title>
-  <meta name="description" content="Risk desk for scenarios, expected value, and probability simulations.">
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ site_area: 'gambler' });
-  </script>
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVC4SNLB');
-  </script>
-  <style>
-    :root{--bg:#0b1220;--panel:#111a2e;--text:#e6edf3;--muted:#9fb0d1;--border:#223052;--accent:#ffc857}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
-    .shell{max-width:960px;margin:0 auto;padding:28px 20px}
-    header{display:flex;justify-content:space-between;align-items:center}
-    .brand{font-weight:700;font-size:18px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#1a2642;color:var(--text);cursor:pointer}
-    .btn:hover{background:#223356}
-    .hero{margin:28px 0;display:grid;gap:20px}
-    .panel{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:18px}
-    h1{margin:0;font-size:26px}
-    h2{margin-top:0}
-    .muted{color:var(--muted)}
-    footer{margin:28px 0;color:var(--muted);font-size:13px;text-align:center}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gambler Model - FourTwenty Analytics</title>
+  <meta name="description" content="The Gambler is the probability sampler">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎲</text></svg>">
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVC4SNLB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<div class="shell">
   <header>
-    <div class="brand">🎲 FourTwenty • The Gambler</div>
+    <h1>🎲 Gambler Model</h1>
+    <p>The Gambler is the probability sampler</p>
     <nav>
-      <a class="btn" href="https://zbreeden.github.io/FourTwentyAnalytics/">← Back to FourTwenty</a>
+      <a href="https://zbreeden.github.io/FourTwentyAnalytics/">← Back to Hub</a> |
+      <a href="https://github.com/zbreeden/gambler-model">Repository</a> |
+      <a href="https://github.com/zbreeden/FourTwentyAnalytics">Hub Source</a>
     </nav>
   </header>
-
-  <section class="hero">
-    <div>
-      <h1>Welcome to The Gambler</h1>
-      <p class="muted">A sandbox for risk and reward. Simulate expected values, trigger sample events, and see how your bets land in GA4.</p>
-      <div class="grid">
-        <button class="btn" onclick="placeBet('coin_flip')">Flip a Coin</button>
-        <button class="btn" onclick="placeBet('roll_dice')">Roll Dice</button>
-        <button class="btn" onclick="placeBet('parlay')">Simulate Parlay</button>
+  
+  <main>
+    <section>
+      <h2>🌌 Constellation Info</h2>
+      <ul>
+        <li><strong>Orbit</strong>: growth-experiment</li>
+        <li><strong>Status</strong>: seed</li>  
+        <li><strong>Module Key</strong>: <code>gambler_model</code></li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>📡 Latest Signal</h2>
+      <div id="signal-container">
+        <p><em>Loading signal data...</em></p>
       </div>
-    </div>
-    <div class="panel">
-      <h2>Current Broadcast</h2>
-      <p class="muted">The Gambler streams its latest picks.</p>
-      <a class="btn" href="./latest.json" target="_blank">View latest.json →</a>
-    </div>
-  </section>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Part of the <a href="https://zbreeden.github.io/FourTwentyAnalytics/">FourTwenty Analytics</a> constellation</p>
+  </footer>
 
-  <section class="panel">
-    <h2>Live Test Console</h2>
-    <p class="muted">Push example events into <code>dataLayer</code> for Tag Assistant and DebugView.</p>
-    <div class="grid">
-      <button class="btn" onclick="signalClick('cta_signup','Sign Up','console')">CTA: Sign up</button>
-      <button class="btn" onclick="pushForm('lead_form','Lead Form')">Form Submit</button>
-      <button class="btn" onclick="pushSearch('odds',6)">Search: odds</button>
-      <button class="btn" onclick="pushPage('strategy','Strategy Page')">Virtual Page View</button>
-    </div>
-  </section>
-
-  <footer>MIT licensed • Built for probability play & analytics iteration</footer>
-</div>
-
-<script>
-  function signalClick(id,text,loc){
-    dataLayer.push({event:'cta_click',cta_id:id,cta_text:text,location:loc});
-    console.log('cta_click',{id,text,loc});
-  }
-  function pushForm(id,name){
-    dataLayer.push({event:'form_submit',form_id:id,form_name:name});
-    console.log('form_submit',{id,name});
-  }
-  function pushSearch(q,n){
-    dataLayer.push({event:'nav_search',query:q,results_count:n});
-    console.log('nav_search',{q,n});
-  }
-  function pushPage(id,title){
-    dataLayer.push({event:'page_view',page_id:id,page_title:title});
-    console.log('page_view',{id,title});
-  }
-  function placeBet(type){
-    const outcomes={coin_flip:['Heads','Tails'],roll_dice:[1,2,3,4,5,6],parlay:['Win','Lose']};
-    const result=outcomes[type][Math.floor(Math.random()*outcomes[type].length)];
-    dataLayer.push({event:'bet_sim',bet_type:type,result:result});
-    alert(`Your ${type.replace('_',' ')} result: ${result}`);
-  }
-</script>
+  <script>
+    // Load and display latest signal data
+    async function loadSignalData() {
+      try {
+        const response = await fetch('./signals/latest.json');
+        if (!response.ok) {
+          throw new Error('Signal data not available');
+        }
+        
+        const signal = await response.json();
+        const container = document.getElementById('signal-container');
+        
+        container.innerHTML = `
+          <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; background: #f9f9f9;">
+            <h3>${signal.emoji || '📡'} ${signal.title}</h3>
+            <p><strong>Summary:</strong> ${signal.summary}</p>
+            <p><strong>Broadcast Time:</strong> ${new Date(signal.ts_utc).toLocaleString()}</p>
+            <p><strong>Rating:</strong> <span style="
+              background: ${signal.rating === 'critical' ? '#ff4444' : 
+                         signal.rating === 'high' ? '#ff8800' : 
+                         signal.rating === 'normal' ? '#4CAF50' : '#888'}; 
+              color: white; 
+              padding: 2px 8px; 
+              border-radius: 4px; 
+              font-size: 0.8em;">${signal.rating}</span></p>
+            ${signal.tags && signal.tags.length > 0 ? 
+              `<p><strong>Tags:</strong> ${signal.tags.map(tag => 
+                `<span style="background: #e1e8ed; padding: 2px 6px; border-radius: 12px; font-size: 0.8em; margin-right: 4px;">${tag}</span>`
+              ).join('')}</p>` : ''}
+            ${signal.payload && signal.payload.notes ? 
+              `<details>
+                <summary>📋 Additional Notes</summary>
+                <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px;">${signal.payload.notes}</p>
+              </details>` : ''}
+          </div>
+        `;
+      } catch (error) {
+        document.getElementById('signal-container').innerHTML = 
+          '<p style="color: #888;"><em>Signal data not yet available. Generate signals/latest.json to see broadcast information.</em></p>';
+      }
+    }
+    
+    // Load signal data when page loads
+    loadSignalData();
+  </script>
 </body>
 </html>
